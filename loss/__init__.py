@@ -5,8 +5,8 @@ from .losses import loss_general
 from .losses import loss_denet
 
 key2loss = {
-    'loss_calc_v2': loss_general,
-    'loss_kpn_v2': loss_denet,
+    'loss_general': loss_general,
+    'loss_denet': loss_denet,
 }
 
 
