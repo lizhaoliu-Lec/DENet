@@ -1,0 +1,25 @@
+test:
+  trainer: DENetTrainer
+  device: 0
+  ckpt: runs
+  id: demo_pascal_fold0
+  best: True
+model:
+  arch:  DENet
+  backbone: ResNet50
+#  PASCAL5i
+  maximum_num_classes: 21
+#  COCO20i
+#  maximum_num_classes: 81
+data:
+#  PASCAL5i
+  path: /path/to/VOC
+  dataset: WrappedVOCSBDSegmentation5i
+#  COCO20i
+#  path: /path/to/COCO
+#  dataset: WrappedCOCOStuff20i
+  fold: 0
+  way: 1
+  shot: 1
+  img_size: 321
+  batch_size: 20
