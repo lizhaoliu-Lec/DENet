@@ -560,14 +560,15 @@ class WrappedVOCSBDSegmentation5(VOCSBDSegmentation5i):
         img_size: expected img_size for both image and mask.
    """
 
-    def __init__(self, root, fold, split, img_size, *args, **kwargs):
-        transforms = Compose([
-            SquareScale(size=img_size),
-            RandomHorizontallyFlip(p=0.5),
-            ToTensor(),
-            Normalize(mean=(0.485, 0.456, 0.406),
-                      std=(0.229, 0.224, 0.225))
-        ])
+    def __init__(self, root, fold, split, img_size, transforms=None, *args, **kwargs):
+        if transforms is None:
+            transforms = Compose([
+                SquareScale(size=img_size),
+                RandomHorizontallyFlip(p=0.5),
+                ToTensor(),
+                Normalize(mean=(0.485, 0.456, 0.406),
+                          std=(0.229, 0.224, 0.225))
+            ])
         super().__init__(roots=root,
                          fold=fold,
                          image_set=split,
@@ -644,14 +645,15 @@ class WrappedVOCSBDSegmentation5i(VOCSBDSegmentation5i):
         img_size: expected img_size for both image and mask.
     """
 
-    def __init__(self, root, fold, split, img_size, *args, **kwargs):
-        transforms = Compose([
-            SquareScale(size=img_size),
-            RandomHorizontallyFlip(p=0.5),
-            ToTensor(),
-            Normalize(mean=(0.485, 0.456, 0.406),
-                      std=(0.229, 0.224, 0.225))
-        ])
+    def __init__(self, root, fold, split, img_size, transforms=None, *args, **kwargs):
+        if transforms is None:
+            transforms = Compose([
+                SquareScale(size=img_size),
+                RandomHorizontallyFlip(p=0.5),
+                ToTensor(),
+                Normalize(mean=(0.485, 0.456, 0.406),
+                          std=(0.229, 0.224, 0.225))
+            ])
         super().__init__(roots=root,
                          fold=fold,
                          image_set=split,
