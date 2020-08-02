@@ -1,0 +1,16 @@
+inference:
+  function: DENet_VOC
+  device: 0
+  id: demo_pascal_fold0
+  fold: 0
+  ckpt: runs
+  best: True
+  save_size: 20
+  root: /path/to/dataset_root
+model:
+  arch:  DENet
+  backbone: ResNet50
+#  PASCAL5i
+  maximum_num_classes: 21
+#  COCO20i
+#  maximum_num_classes: 81
