@@ -8,6 +8,7 @@ We propose a Dynamic ExtensionNetwork (DENet) in which we dynamically construct 
 
 ### Citation
 If you find our work useful in your research, please consider citing:
+		  
 		  @inproceedings{liu2020dynamic, 
 			author={Lizhao Liu, Junyi Cao, Minqian Liu, Yong Guo, Qi Chen and Mingkui Tan}, 
 			booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)}, 
