@@ -10,8 +10,8 @@ We propose a Dynamic Extension Network (DENet) in which we dynamically construct
 If you find our work useful in your research, please consider citing:
 		  
 	@inproceedings{liu2020dynamic, 
-		title={Dynamic Extension Nets for Few-shot Semantic Segmentation},
-		author={Liu, Lizhao and Cao, Junyi and Liu, Minqian and Guo, Yong and Chen, Qi and Tan, Mingkui}, 
-		booktitle={Proceedings of the 28th ACM International Conference on Multimedia},  
-		year={2020}
+	title={Dynamic Extension Nets for Few-shot Semantic Segmentation},
+	author={Liu, Lizhao and Cao, Junyi and Liu, Minqian and Guo, Yong and Chen, Qi and Tan, Mingkui}, 
+	booktitle={Proceedings of the 28th ACM International Conference on Multimedia},  
+	year={2020}
 	}
