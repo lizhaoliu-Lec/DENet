@@ -11,7 +11,7 @@ If you find our work useful in your research, please consider citing:
 		  
 		  @inproceedings{liu2020dynamic, 
 			author={Lizhao Liu, Junyi Cao, Minqian Liu, Yong Guo, Qi Chen and Mingkui Tan}, 
-			booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+			booktitle={Proceedings of the 28th ACM International Conference on Multimedia}, 
 			booktitle={Dynamic Extension Nets for Few-shot Semantic Segmentation}, 
 			year={2020}
 		  }
