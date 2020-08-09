@@ -30,9 +30,8 @@ train:
     name: loss_general
   num_steps: 150000
   optimizer:
-    lr: 0.0025
-    momentum: 0.9
-    name: sgd
+    lr: 0.000001
+    name: rmsprop
     weight_decay: 0.0005
   debug: False
   debug_and_val: True
