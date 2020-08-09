@@ -16,6 +16,11 @@ This repository contains the official PyTorch-implementation of our [ACM MM 2020
 - **tensorboardX** for recording training information
 - **tqdm** for displaying the training progress
 - **pyyaml** for reading `yml` files
+- A full list of dependencies are in [requirements.txt](requirements.txt), you can use
+	```bash
+	pip install -r requirements.txt
+	```
+	to download all the dependencies.
 
 #### Dataset Preparation
 1. Enter the file `dataset/voc_sbd.py` and modify the `ROOT` to the path where you want to save the dataset.
@@ -64,6 +69,48 @@ python -u inference.py
 ```
 
 The output images will be saved to `results/${MODEL_NAME}/${ID}`.
+
+---
+
+### Quantitive Results
+
+- All results below are in mIoU(%)
+
+<table>
+<tr>
+<td align='center' colspan=4><b>PASCAL-5<i>i</i></b></td>
+</tr>
+<tr>
+<td align='center'>1 way 1 shot</td>
+<td align='center'>1 way 5 shot</td>
+<td align='center'>2 way 1 shot</td>
+<td align='center'>2 way 5 shot</td>
+</tr>
+<tr>
+<td align='center'>60.08</td>
+<td align='center'>60.46</td>
+<td align='center'>52.17</td>
+<td align='center'>53.62</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td align='center' colspan=4><b>COCO-20<i>i</i></b></td>
+</tr>
+<tr>
+<td align='center'>1 way 1 shot</td>
+<td align='center'>1 way 5 shot</td>
+<td align='center'>2 way 1 shot</td>
+<td align='center'>2 way 5 shot</td>
+</tr>
+<tr>
+<td align='center'>42.77</td>
+<td align='center'>43.02</td>
+<td align='center'>38.52</td>
+<td align='center'>40.87</td>
+</tr>
+</table>
 
 ---
 
