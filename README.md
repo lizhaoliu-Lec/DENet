@@ -3,8 +3,86 @@ Created by Lizhao Liu, Junyi Cao and Minqian Liu from South China University of 
 
 This repository contains the official PyTorch-implementation of our [ACM MM 2020 paper *Dynamic Extension Nets for Few-shot Semantic Segmentation*](#). In particular, we release the code for training and testing the DENet and our re-implemented methods for few-shot semantic segmentation under {1, 2}-way and {1, 5}-shot settings. 
 
-#### Abstract
-We propose a Dynamic Extension Network (DENet) in which we dynamically construct and maintain a classifier for the novel class by leveraging the knowledge from the base classes and the information from novel data. More importantly, to overcome the information suppression issue, we design a Guided Attention Module (GAM), which can be plugged into any framework to help learn class-relevant features. Last, rather than directly train the model with limited data, we propose a dynamic extension training algorithm to predict the weights of novel classifiers, which is able to exploit the knowledge of base classifiers by dynamically extending classes during training. The extensive experiments show that our proposed method achieves state-of-the-art performance on the PASCAL-5𝑖 and COCO-20𝑖 datasets.
+<br>
+
+<img src="image/arch.png" align="center">
+
+---
+### Usage
+
+#### Environment
+- **PyTorch 1.3.1**
+- **torchvision 0.4.2**
+- **tensorboardX** for recording training information
+- **tqdm** for displaying the training progress
+- **pyyaml** for reading `yml` files
+
+#### Dataset Preparation
+1. Enter the file `dataset/voc_sbd.py` and modify the `ROOT` to the path where you want to save the dataset.
+	```python
+	# specify root path for the data path
+	ROOT = '/path/to/data'
+	``` 
+1. Run the function `run_VOCSBDSegmentation5i_from_scratch()` to download and process 4 subfolds of PASCAL-5*i* dataset.
+
+1. Enter the file `dataset/coco.py` and modify the `ROOT` to the path where you want to save the dataset.
+	```python
+	# specify root path for the data path
+	ROOT = '/path/to/data'
+	``` 
+1. Run the function `run_COCOStuff20i_from_scratch()` to download and process 4 subfolds of COCO-20*i* dataset.
+
+#### Configurations
+Please enter the `config` directory, we already provide you with several configuration templates for training, testing and performing inference using our DENet and some other re-implemented models. 
+You **need** to create three empty files in `config` directory: `train_config.yml`, `test_config.yml` and `inference_config.yml`. Then, you can copy the content in one of the template files to fill the corresponding `yml` file. For example, you can copy the content in `train_config_denet.template` to `train_config.yml` for training with DENet. You still need to specify the path to the dataset in `yml` files.
+
+**Note**: The provided templates use PASCAL-5*i* as the default dataset, you can change the corresponding arguments to use COCO-20*i* dataset.
+
+#### Training
+After the `train_config.yml` file is appropriately configured, training is quite simple with just one line of script:
+
+```bash
+python -u train.py
+```
+
+All the records of training information will be automatically saved to `runs/${MODEL_NAME}/${ID}`.
+
+#### Testing
+After the `test_config.yml` file is appropriately configured, you can run the following script to test the trained model:
+
+```bash
+python -u test.py
+```
+
+Likewise, all the records of testing information will be automatically saved to `runs/${MODEL_NAME}/${ID}`.
+
+#### Inference
+After the `inference_config.yml` file is appropriately configured, you can do inference with the trained model using the script:
+
+```bash
+python -u inference.py
+```
+
+The output images will be saved to `results/${MODEL_NAME}/${ID}`.
+
+---
+
+### Qualitative Results
+
+- 1 way
+
+<img src="image/qualitative.png" align="center">
+
+
+- 2 way
+
+<img src="image/2way.png" align="center">
+
+- failure cases
+
+<img src="image/failure.png" align="center">
+
+---
 
 ### Citation
 If you find our work useful in your research, please consider citing:
@@ -15,3 +93,9 @@ If you find our work useful in your research, please consider citing:
 	booktitle={Proceedings of the 28th ACM International Conference on Multimedia},  
 	year={2020}
 	}
+
+---
+
+### Acknowledgments
+
+This work was partially supported by the Key-Area Research and Development Program of Guangdong Province (2019B010155002, 2018B010107001, 2019B010-155001), National Natural Science Foundation of China (NSFC) 61836003 (key project), 2017ZT07X183, Fundamental Research Funds for the Central Universities D2191240.
