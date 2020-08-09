@@ -1,0 +1,21 @@
+test:
+  trainer: PatternTrainer
+  device: 0
+  ckpt: runs
+  id: demo_pascal_fold0
+  best: True
+model:
+  arch:  PGN
+  backbone: ResNet50
+data:
+#  PASCAL5i
+  path: /path/to/VOC
+  dataset: WrappedVOCSBDSegmentation5i
+#  COCO20i
+#  path: /path/to/COCO
+#  dataset: WrappedCOCOStuff20i
+  fold: 0
+  way: 1
+  shot: 1
+  img_size: 321
+  batch_size: 20
