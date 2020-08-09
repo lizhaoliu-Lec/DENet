@@ -691,6 +691,21 @@ if __name__ == '__main__':
                                    download=False)  # already download above
         print('split: test, fold: %d, len: ' % fold, len(voc))
 
+        for _ in range(1, 4):
+            fold = _
+            voc = VOCSBDSegmentation5i(roots=roots_path,
+                                       image_set='train',
+                                       fold=fold,
+                                       download=False)  # already download above
+            print('split: train, fold: %d, len: ' % fold, len(voc))
+
+            voc = VOCSBDSegmentation5i(roots=roots_path,
+                                       image_set='test',
+                                       fold=fold,
+                                       download=False)  # already download above
+            print('split: test, fold: %d, len: ' % fold, len(voc))
+
+
 
     def run_VOCSBDSegmentation5i_wrapper():
         dataset = WrappedVOCSBDSegmentation5i(root=roots_path,

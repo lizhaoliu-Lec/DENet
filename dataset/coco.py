@@ -941,6 +941,20 @@ if __name__ == '__main__':
                             download=False)  # already download above
         print('split: test, fold: %d, len: ' % fold, len(coco))
 
+        for _ in range(1, 4):
+            fold = _
+            voc = COCOStuff20i(roots=root_path,
+                               image_set='train',
+                               fold=fold,
+                               download=False)  # already download above
+            print('split: train, fold: %d, len: ' % fold, len(voc))
+
+            voc = COCOStuff20i(roots=root_path,
+                               image_set='test',
+                               fold=fold,
+                               download=False)  # already download above
+            print('split: test, fold: %d, len: ' % fold, len(voc))
+
 
     def run_WrappedCOCOStuff20i():
         dataset = WrappedCOCOStuff20i(root=root_path,
