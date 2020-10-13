@@ -1,7 +1,7 @@
 ## Dynamic Extension Nets for Few-shot Semantic Segmentation
 Created by Lizhao Liu, Junyi Cao and Minqian Liu from South China University of Technology.
 
-This repository contains the official PyTorch-implementation of our [ACM MM 2020 paper *Dynamic Extension Nets for Few-shot Semantic Segmentation*](Dynamic_Extension_Nets_for_Few_shot_Semantic_Segmentation_ACM_MM2020.pdf). In particular, we release the code for training and testing the DENet and our re-implemented methods for few-shot semantic segmentation under {1, 2}-way and {1, 5}-shot settings. 
+This repository contains the official PyTorch-implementation of our [ACM MM 2020 paper *Dynamic Extension Nets for Few-shot Semantic Segmentation*](https://dl.acm.org/doi/10.1145/3394171.3413915). In particular, we release the code for training and testing the DENet and our re-implemented methods for few-shot semantic segmentation under {1, 2}-way and {1, 5}-shot settings. 
 
 <br>
 
