@@ -23,6 +23,11 @@ This repository contains the official PyTorch-implementation of our [ACM MM 2020
 	to download all the dependencies.
 
 #### Dataset Preparation
+1. To save your trouble, you can directly download our preprocessed datasets via google drive:
+   
+   * PASCAL VOC 5i (6.4GB): https://drive.google.com/uc?export=download&id=1uWNPSd_tEG5-WCRcG1sk9-5R0yI-O0XL
+   * COCO 20i (23GB): The coco dataset is too large and I highly recommend you to download and preprocess it as the following instructions.
+   
 1. Enter the file `dataset/voc_sbd.py` and modify the `ROOT` to the path where you want to save the dataset.
 	```python
 	# specify root path for the data path
