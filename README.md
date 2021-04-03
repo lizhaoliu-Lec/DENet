@@ -8,12 +8,14 @@ This repository contains the official PyTorch-implementation of our [ACM MM 2020
 <img src="image/arch.png" align="center">
 
 ### Pretrained Models
-For the convenience of relevant researchers to reproduce our results, we have release the pretrained models, tensorboard and logs during training.
+For the convenience of relevant researchers to reproduce our results, we have release the pretrained models, tensorboard files and logs during training.
 They are all uploaded to the google drive:
 The config files are in [reproduce_configs](reproduce_configs).
 The run script is in [run.sh](run.sh).
 
-The reproduced results are somehow better than the original papers
+Note that, it may take a while to fully load the tensorboard files after running the tensorboard command.
+
+The reproduced results are somehow better than the ones in the original paper.
 <table>
 <tr>
 <td align='center' colspan=11><b>COCO-20<i>i</i></b></td>
