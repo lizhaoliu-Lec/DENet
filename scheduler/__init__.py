@@ -1,12 +1,14 @@
 from .schedulers import ConstantLR
 from .schedulers import PolynomialLR
 from .schedulers import MultiStepLR
+from .schedulers import StepLR
 from .schedulers import CosineAnnealingLR
 from .schedulers import ExponentialLR
 
 key2scheduler = {
     'ConstantLR': ConstantLR,
     'PolynomialLR': PolynomialLR,
+    'StepLR': StepLR,
     'MultiStepLR': MultiStepLR,
     'CosineAnnealingLR': CosineAnnealingLR,
     'ExponentialLR': ExponentialLR

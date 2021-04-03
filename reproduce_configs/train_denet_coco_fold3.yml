@@ -1,0 +1,31 @@
+data:
+  fold: 3
+  img_size: 321
+  batch_size: 8
+  batch_size_val: 16
+  shot: 1
+  path: <your_path_to_COCO>
+  train_dataset: WrappedCOCOStuff20i
+  val_dataset: WrappedCOCOStuff20i
+model:
+  arch: DENet
+  backbone: ResNet50
+  maximum_num_classes: 81
+train:
+  trainer: DENetTrainer
+  id: reproduce_denet_coco_fold3_200k
+  device: 3
+  log_steps: 1000
+  val_steps: 500
+  lambda: 1.0
+  loss:
+    name: loss_denet
+  num_steps: 200000
+  optimizer:
+    lr: 0.0025
+    momentum: 0.9
+    name: sgd
+    weight_decay: 0.0005
+  debug: False
+  debug_and_val: True
+# train script: python -u train.py --config config/train_denet_coco_fold3.yml

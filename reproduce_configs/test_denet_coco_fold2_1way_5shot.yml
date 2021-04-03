@@ -1,0 +1,20 @@
+test:
+  trainer: DENetTrainer
+  device: 2
+  ckpt: runs
+  id: reproduce_denet_coco_fold2_200k
+  best: True
+model:
+  arch:  DENet
+  backbone: ResNet50
+  maximum_num_classes: 81
+data:
+  path: <your_path_to_COCO>
+  dataset: WrappedCOCOStuff20i
+  fold: 2
+  way: 1
+  shot: 5
+  img_size: 321
+  batch_size: 20
+
+# test script: python -u test.py --config config/test_denet_coco_fold2_1way_5shot.yml
