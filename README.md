@@ -9,7 +9,8 @@ This repository contains the official PyTorch-implementation of our [ACM MM 2020
 
 ### Pretrained Models
 For the convenience of relevant researchers to reproduce our results, we have release the pretrained models, tensorboard files and logs during training.
-They are all uploaded to the google drive:
+They are all uploaded to the google drive: https://drive.google.com/uc?export=download&id=13SzrlZ6iTJL-pGhEDDrL-SjJuAGVhMid
+
 The config files are in [reproduce_configs](reproduce_configs).
 The run script is in [run.sh](run.sh).
 
