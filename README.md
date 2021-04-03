@@ -7,6 +7,63 @@ This repository contains the official PyTorch-implementation of our [ACM MM 2020
 
 <img src="image/arch.png" align="center">
 
+### Pretrained Models
+For the convenience of relevant researchers to reproduce our results, we have release the pretrained models, tensorboard and logs during training.
+They are all uploaded to the google drive:
+The config files are in [reproduce_configs](reproduce_configs).
+The run script is in [run.sh](run.sh).
+
+The reproduced results are somehow better than the original papers
+<table>
+<tr>
+<td align='center' colspan=11><b>COCO-20<i>i</i></b></td>
+</tr>
+<tr>
+<td align='center'></td>
+<td align='center' colspan=5><b>1-way 1-shot</b></td>
+<td align='center' colspan=5><b>1-way 5-shot</b></td>
+</tr>
+<tr>
+<td align='center'></td>
+<td align='center'>fold0</td>
+<td align='center'>fold1</td>
+<td align='center'>fold2</td>
+<td align='center'>fold3</td>
+<td align='center'>mean</td>
+<td align='center'>fold0</td>
+<td align='center'>fold1</td>
+<td align='center'>fold2</td>
+<td align='center'>fold3</td>
+<td align='center'>mean</td>
+</tr>
+<tr>
+<td align='center'>Paper</td>
+<td align='center'>42.90</td>
+<td align='center'>45.78</td>
+<td align='center'>42.16</td>
+<td align='center'>40.22</td>
+<td align='center'>42.77</td>
+<td align='center'>45.40 </td>
+<td align='center'>44.86 </td>
+<td align='center'>41.57 </td>
+<td align='center'>40.26 </td>
+<td align='center'>43.02</td>
+</tr>
+<tr>
+<td align='center'>Reproduced</td>
+<td align='center'>43.14</td>
+<td align='center'>45.84</td>
+<td align='center'>42.07</td>
+<td align='center'>40.80</td>
+<td align='center'>42.96</td>
+<td align='center'>46.46</td>
+<td align='center'>44.95</td>
+<td align='center'>40.28</td>
+<td align='center'>40.99</td>
+<td align='center'>43.17</td>
+</tr>
+</table>
+
 ---
 ### Usage
 
