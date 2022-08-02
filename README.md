@@ -137,7 +137,7 @@ The output images will be saved to `results/${MODEL_NAME}/${ID}`.
 
 ---
 
-### Quantitive Results
+### Quantitative Results
 
 - All results below are in mIoU(%)
 
