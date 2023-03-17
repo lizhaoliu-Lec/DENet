@@ -943,13 +943,13 @@ if __name__ == '__main__':
 
         for _ in range(1, 4):
             fold = _
-            voc = COCOStuff20i(roots=root_path,
+            voc = COCOStuff20i(root=root_path,
                                image_set='train',
                                fold=fold,
                                download=False)  # already download above
             print('split: train, fold: %d, len: ' % fold, len(voc))
 
-            voc = COCOStuff20i(roots=root_path,
+            voc = COCOStuff20i(root=root_path,
                                image_set='test',
                                fold=fold,
                                download=False)  # already download above
